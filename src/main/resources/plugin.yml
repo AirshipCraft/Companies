@@ -1,0 +1,15 @@
+name: AirshipCraftCompanies
+version: '${project.version}'
+main: tk.airshipcraft.airshipcraftcompanies.Companies
+api-version: 1.19
+load: STARTUP
+commands:
+  createcompany:
+    description: Create a new company
+    usage: /createcompany <company_name> <investment> <payroll_amount>
+    executor: tk.airshipcraft.airshipcraftcompanies.CreateCompanyCommand
+  payroll:
+    description: Pay your employees
+    usage: /payroll <pay|set> [value]
+    aliases: /pr
+    executor: tk.airshipcraft.airshipcraftcompanies.PayRollCommand
